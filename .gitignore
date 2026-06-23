@@ -1,0 +1,17 @@
+node_modules/
+
+# Hasil kompilasi otomatis Next.js (Wajib dimasukkan!)
+.next/
+out/
+
+# Hasil log error sistem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# File log dan cache untuk database SQLite internal
+src/localdb/*.db-journal
+
+# File sampah bawaan sistem operasi (Windows / Mac)
+.DS_Store
+Thumbs.db
