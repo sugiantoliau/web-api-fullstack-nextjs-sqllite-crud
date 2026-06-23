@@ -140,49 +140,49 @@ echo MVC folder structure successfully created inside src!
 ```
 
 
-### 🔧 Verify MVC folder structure
+### 🗂️ MVC Folder Structure
 
-after folder created,  the MVC folder structure, The project will look like this:
+After creating the folders, the project will look like this:
 
-
+```text
 ias-fullstack-nextjs/
-├── .next/                     <-- [BAWAAN NEXT.JS] Hasil kompilasi otomatis (Jangan diubah manual)
-├── node_modules/              <-- [BAWAAN NEXT.JS] Semua library & dependencies Node.js (Isinya sangat besar)
+├── .next/                     <-- [Default Next.js] Auto‑compiled build output (do not edit manually)
+├── node_modules/              <-- [Default Next.js] All Node.js libraries & dependencies (very large)
 ├── prisma/                    
-│   └── schema.prisma          <-- Tempat mendefinisikan tabel database (Product & Customer)
-├── public/                    <-- [BAWAAN NEXT.JS] Tempat menyimpan aset statis (Logo, Icon, Favicon)
-│   ├── favicon.ico            <-- Ikon tab browser bawaan Next.js
-│   └── file-aset-anda.png     
+│   └── schema.prisma          <-- Defines database tables (Product & Customer)
+├── public/                    <-- [Default Next.js] Static assets (Logo, Icon, Favicon)
+│   ├── favicon.ico            <-- Default browser tab icon
+│   └── file-asset.png     
 │
-├── src/                       <-- Folder utama kode program aplikasi Anda
+├── src/                       <-- Main application source code
 │   ├── localdb/               
-│   │   └── dev.db             <-- File fisik database lokal (SQLite) Anda berada (Otomatis muncul setelah migrate)
+│   │   └── dev.db             <-- Local SQLite database file (auto‑generated after migrate)
 │   │
-│   ├── app/                   <-- [BAWAAN NEXT.JS - ROUTING PINTU MASUK]
-│   │   ├── api/               <-- Gerbang REST API (Format JSON untuk Mobile App)
+│   ├── app/                   <-- [Default Next.js] Routing entry points
+│   │   ├── api/               <-- REST API gateway (JSON for Mobile App)
 │   │   │   ├── products/
-│   │   │   │   └── route.js   <-- Menghubungkan API Produk ke Controller
+│   │   │   │   └── route.js   <-- Connects Product API to Controller
 │   │   │   └── customers/
-│   │   │       └── route.js   <-- Menghubungkan API Customer ke Controller
+│   │   │       └── route.js   <-- Connects Customer API to Controller
 │   │   │
-│   │   ├── products/          <-- Gerbang Frontend Web Produk
-│   │   │   └── page.js        <-- Mengambil data dari Controller untuk Tampilan Web
-│   │   ├── customers/         <-- Gerbang Frontend Web Customer
-│   │   │   └── page.js        <-- Mengambil data dari Controller untuk Tampilan Web
+│   │   ├── products/          <-- Frontend Product pages
+│   │   │   └── page.js        <-- Fetches data from Controller for Web UI
+│   │   ├── customers/         <-- Frontend Customer pages
+│   │   │   └── page.js        <-- Fetches data from Controller for Web UI
 │   │   │
-│   │   ├── globals.css        <-- [BAWAAN NEXT.JS] File CSS utama (Konfigurasi Tailwind CSS)
-│   │   ├── layout.js          <-- [BAWAAN NEXT.JS] Kerangka template dasar web (Header/Footer global)
-│   │   └── page.js            <-- [BAWAAN NEXT.JS] Halaman utama pertama saat web dibuka (Landing Page)
+│   │   ├── globals.css        <-- [Default Next.js] Main CSS (Tailwind config)
+│   │   ├── layout.js          <-- [Default Next.js] Global layout (Header/Footer)
+│   │   └── page.js            <-- [Default Next.js] Landing page
 │   │
-│   ├── controllers/           <-- [C - CONTROLLERS] Tempat logika bisnis utama
+│   ├── controllers/           <-- [C - Controllers] Business logic
 │   │   ├── productController.js
 │   │   └── customerController.js
 │   │
-│   ├── models/                <-- [M - MODELS] Tempat murni query database (Prisma Client)
+│   ├── models/                <-- [M - Models] Database queries (Prisma Client)
 │   │   ├── productModel.js
 │   │   └── customerModel.js
 │   │
-│   ├── views/                 <-- [V - VIEWS] Tempat komponen tampilan UI (HTML/React)
+│   ├── views/                 <-- [V - Views] UI components (React)
 │   │   ├── products/
 │   │   │   ├── ProductForm.js
 │   │   │   └── ProductTable.js
@@ -191,20 +191,21 @@ ias-fullstack-nextjs/
 │   │       └── CustomerTable.js
 │   │
 │   └── lib/                   
-│       └── prisma.js          <-- Instance koneksi database Prisma global
+│       └── prisma.js          <-- Global Prisma database connection
 │
-├── .env                       <-- [POSISI BARU] Konfigurasi string database (DATABASE_URL="file:../src/localdb/dev.db")
-├── .gitignore                 <-- [BAWAAN NEXT.JS] Daftar file/folder yang tidak boleh masuk ke Git (Pastikan isi .env & dev.db terdaftar)
-├── AGENTS.md                  <-- Panduan khusus untuk AI Coding Agent (Cursor/Copilot/Cline) Anda
-├── CLAUDE.md                  <-- File guideline tambahan untuk AI
-├── eslint.config.mjs          <-- [BAWAAN NEXT.JS] Konfigurasi standarisasi dan pengecekan error kode
-├── jsconfig.json              <-- [BAWAAN NEXT.JS] Konfigurasi path mapping (Fitur alias `@/*` yang Anda pilih)
-├── next.config.mjs            <-- [BAWAAN NEXT.JS] File konfigurasi utama untuk pengaturan Next.js
-├── package.json               <-- [BAWAAN NEXT.JS] Informasi nama proyek, versi, dan daftar script (npm run dev)
-├── package-lock.json          <-- [BAWAAN NEXT.JS] Catatan versi detail library node_modules
-├── postcss.config.mjs         <-- [BAWAAN NEXT.JS] Konfigurasi compiler CSS untuk Tailwind
-├── tailwind.config.mjs        <-- [BAWAAN NEXT.JS] Tempat settingan utility class desain Tailwind CSS
-└── README.md                  <-- [BAWAAN NEXT.JS] Dokumentasi teks penjelasan proyek Anda
+├── .env                       <-- Database connection string (e.g., DATABASE_URL="file:../src/localdb/dev.db")
+├── .gitignore                 <-- [Default Next.js] Files/folders excluded from Git (ensure .env & dev.db are listed)
+├── AGENTS.md                  <-- AI Coding Agent guidelines
+├── CLAUDE.md                  <-- Additional AI guidelines
+├── eslint.config.mjs          <-- [Default Next.js] ESLint configuration
+├── jsconfig.json              <-- [Default Next.js] Path mapping config (alias `@/*`)
+├── next.config.mjs            <-- [Default Next.js] Main Next.js configuration
+├── package.json               <-- [Default Next.js] Project info & npm scripts
+├── package-lock.json          <-- [Default Next.js] Detailed dependency versions
+├── postcss.config.mjs         <-- [Default Next.js] Tailwind CSS compiler config
+├── tailwind.config.mjs        <-- [Default Next.js] Tailwind utility class settings
+└── README.md                  <-- Project documentation
+
 
 
 ### 🔧 Hands on Code
@@ -226,7 +227,6 @@ npx prisma migrate dev --name init
 npx prisma generate
 ```
 
-<br>
 ### 🔧 Create Product Management
 Implement the following files:
 
@@ -248,7 +248,7 @@ URLs to run:
 
 √ Product REST API (JSON for Mobile) → http://localhost:3000/api/products
 
-<br>
+
 ### 🔧 Create Customer Management
 Implement the following files:
 
