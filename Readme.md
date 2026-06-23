@@ -205,7 +205,7 @@ ias-fullstack-nextjs/
 ├── postcss.config.mjs         <-- [Default Next.js] Tailwind CSS compiler config
 ├── tailwind.config.mjs        <-- [Default Next.js] Tailwind utility class settings
 └── README.md                  <-- Project documentation
-
+```
 
 
 ### 🔧 Hands on Code
