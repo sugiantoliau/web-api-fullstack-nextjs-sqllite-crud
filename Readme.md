@@ -226,6 +226,7 @@ npx prisma migrate dev --name init
 npx prisma generate
 ```
 
+<br>
 ### 🔧 Create Product Management
 Implement the following files:
 
@@ -247,7 +248,7 @@ URLs to run:
 
 √ Product REST API (JSON for Mobile) → http://localhost:3000/api/products
 
-
+<br>
 ### 🔧 Create Customer Management
 Implement the following files:
 
