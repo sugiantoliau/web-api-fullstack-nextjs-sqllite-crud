@@ -36,14 +36,23 @@ npx create-next-app@latest .
 
 Answer the questions as Follow:
 √ Would you like to use the recommended Next.js defaults? » No, customize settings
+
 √ Would you like to use TypeScript? ... No
+
 √ Which linter would you like to use? » ESLint
+
 √ Would you like to use React Compiler? ... No
+
 √ Would you like to use Tailwind CSS? ... Yes
+
 √ Would you like your code inside a `src/` directory? Yes
+
 √ Would you like to use App Router? (recommended) Yes
+
 √ Would you like to customize the import alias (`@/*` by default)? Yes
+
 √ What import alias would you like configured? ... @/*
+
 √ Would you like to include AGENTS.md to guide coding agents to write up-to-date Next.js code? Yes
 
 
@@ -219,29 +228,45 @@ npx prisma generate
 
 ### 🔧 Create Product Management
 Implement the following files:
+
 √ src/models/productModel.js
+
 √ src/controllers/productController.js
+
 √ src/views/products/ProductForm.js
+
 √ src/views/products/ProductTable.js
+
 √ src/app/products/page.js
+
 √ src/app/api/products/route.js
 
 URLs to run:
+
 √ Product Management Web Page → http://localhost:3000/products
+
 √ Product REST API (JSON for Mobile) → http://localhost:3000/api/products
 
 
 ### 🔧 Create Customer Management
 Implement the following files:
+
 √ src/models/customerModel.js
+
 √ src/controllers/customerController.js
+
 √ src/views/customers/CustomerForm.js
+
 √ src/views/customers/CustomerTable.js
+
 √ src/app/customers/page.js
+
 √ src/app/api/customers/route.js
 
 URLs to run:
+
 √ Customer Management Web Page → http://localhost:3000/customers
+
 √ Customer REST API (JSON for Mobile) → http://localhost:3000/api/customers
 
 
