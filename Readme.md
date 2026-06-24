@@ -122,7 +122,7 @@ npm run dev
 npm run dev
 ```
 
-
+<br><hr><br>
 
 ## 📖 Details Step by Step on Created This Development
 
@@ -224,7 +224,6 @@ ias-fullstack-nextjs/
 ├── tailwind.config.mjs        <-- [Default Next.js] Tailwind utility class settings
 └── README.md                  <-- Project documentation
 ```
-
 
 ### 🔧 Hands on Code
 
