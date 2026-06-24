@@ -76,6 +76,24 @@ npx prisma -v
 ```
 
 
+### 🔧 Initialize Prisma
+Run "prisma generate" to initialize @prisma/client
+
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+```
+
+
+### 🔧 Start the development server:
+
+```bash
+npm run dev
+```
+
+<br><hr><br>
+
+
 ## 📖 Some Code that often used
 
 ### Clean and Rebuild Everything
